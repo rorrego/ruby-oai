@@ -32,7 +32,7 @@ module OAI::Provider
   class Model
     attr_reader :timestamp_field
     
-    def initialize(limit = nil, timestamp_field = 'updated_at')
+    def initialize(limit = 10, timestamp_field = 'updated_at')
       @limit = limit
       @timestamp_field = timestamp_field
     end
