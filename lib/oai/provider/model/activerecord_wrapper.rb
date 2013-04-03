@@ -15,8 +15,9 @@ module OAI::Provider
     def initialize(model, options={})
       @model = model
       @timestamp_field = options.delete(:timestamp_field) || 'updated_at'
-      @limit = options.delete(:limit)
-
+      #@limit = options.delete(:limit)
+      @limit = 10
+      
       unless options.empty?
         raise ArgumentError.new(
           "Unsupported options [#{options.keys.join(', ')}]"
